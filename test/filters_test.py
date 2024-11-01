@@ -1,6 +1,6 @@
 from pytest import fixture
 from typing import Callable, TypeAlias
-from filters import negative, positive, odds, evens
+from src.filters import negative, positive, odds, evens
 
 INP: list[int | float] = [0, 1, 2, 3, -4, 5, 6, 7, -8, 9, 10, -11]
 Func: TypeAlias = Callable[[list[int | float]], list[int | float]]

@@ -1,5 +1,5 @@
 from pytest import fixture
-from multiplication_tables import calculate
+from src.multiplication_tables import calculate
 
 
 @fixture

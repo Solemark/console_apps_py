@@ -1,5 +1,5 @@
 from pytest import fixture
-from remove_characters import remove
+from src.remove_characters import remove
 
 
 @fixture

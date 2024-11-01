@@ -1,5 +1,5 @@
 from pytest import fixture
-from fizz_buzz import fizz_buzz
+from src.fizz_buzz import fizz_buzz
 
 
 @fixture

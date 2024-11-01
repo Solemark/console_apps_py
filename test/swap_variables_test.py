@@ -1,4 +1,4 @@
-from swap_variables import swap
+from src.swap_variables import swap
 
 
 def test_swap_variables() -> None:

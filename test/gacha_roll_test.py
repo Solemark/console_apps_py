@@ -1,5 +1,5 @@
 from pytest import fixture
-from gacha_roll import roll
+from src.gacha_roll import roll
 
 
 @fixture

@@ -1,5 +1,5 @@
 from pytest import fixture
-from sum_array import compute
+from src.sum_array import compute
 
 
 @fixture

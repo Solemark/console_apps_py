@@ -1,5 +1,5 @@
 from pytest import fixture
-from iso_string import is_iso
+from src.iso_string import is_iso
 
 
 @fixture

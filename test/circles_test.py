@@ -1,6 +1,6 @@
 from math import pi
 from pytest import fixture
-from circles import get_area, get_circ
+from src.circles import get_area, get_circ
 
 
 @fixture

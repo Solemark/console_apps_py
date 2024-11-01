@@ -1,6 +1,6 @@
 from pytest import fixture
-from date_time import datetime
-from date_time import get_current_time, format_date
+from datetime import datetime
+from src.date_time import get_current_time, format_date
 
 
 @fixture

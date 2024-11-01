@@ -1,5 +1,5 @@
 from pytest import fixture
-from dice import roll
+from src.dice import roll
 
 
 @fixture

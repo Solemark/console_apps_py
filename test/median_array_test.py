@@ -10,7 +10,7 @@ def data() -> list[list[list[int | float]]]:
     ]
 
 
-def test_median_array(data) -> None:
+def test_median_array(data: list[list[list[int | float]]]) -> None:
     for i in data:
         exp: int | float = i[2][0]
         res: int | float = get_median_array(i[0], i[1])

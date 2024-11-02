@@ -21,11 +21,11 @@ def circs() -> list[list[int | float]]:
     ]
 
 
-def test_area(areas) -> None:
-    for item in areas:
-        assert round(item[0], 2) == round(get_area(item[1]), 2)
+def test_area(areas: list[list[int | float]]) -> None:
+    for area in areas:
+        assert round(area[0], 2) == round(get_area(area[1]), 2)
 
 
-def test_circ(circs) -> None:
-    for item in circs:
-        assert round(item[0], 2) == round(get_circ(item[1]), 2)
+def test_circ(circs: list[list[int | float]]) -> None:
+    for circ in circs:
+        assert round(circ[0], 2) == round(get_circ(circ[1]), 2)

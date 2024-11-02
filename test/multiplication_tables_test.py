@@ -98,7 +98,7 @@ def data() -> list[tuple[int, list[str]]]:
     ]
 
 
-def test_multiplication_tables(data) -> None:
+def test_multiplication_tables(data: list[tuple[int, list[str]]]) -> None:
     for item in data:
         inp, exp = item
         assert exp == calculate(inp, 12)

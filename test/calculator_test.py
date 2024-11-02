@@ -11,28 +11,28 @@ def data() -> list[list[int]]:
     ]
 
 
-def test_add(data) -> None:
+def test_add(data: list[list[int]]) -> None:
     for i in data:
         a: int = i[0]
         b: int = i[1]
         assert add(a, b) == a + b
 
 
-def test_sub(data) -> None:
+def test_sub(data: list[list[int]]) -> None:
     for i in data:
         a: int = i[0]
         b: int = i[1]
         assert sub(a, b) == a - b
 
 
-def test_mul(data) -> None:
+def test_mul(data: list[list[int]]) -> None:
     for i in data:
         a: int = i[0]
         b: int = i[1]
         assert mul(a, b) == a * b
 
 
-def test_div(data) -> None:
+def test_div(data: list[list[int]]) -> None:
     for i in data:
         a: int = i[0]
         b: int = i[1]

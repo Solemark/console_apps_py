@@ -1,5 +1,6 @@
 from pytest import fixture
-from src.palindrome import palindrome_fp, palindrome
+
+from src.palindrome import palindrome, palindrome_fp
 
 
 @fixture

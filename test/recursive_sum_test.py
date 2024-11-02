@@ -1,5 +1,6 @@
 from pytest import fixture
-from src.recursive_sum import number, array
+
+from src.recursive_sum import array, number
 
 
 @fixture

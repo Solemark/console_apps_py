@@ -1,4 +1,5 @@
 from pytest import fixture
+
 from src.tail_recursion import recursive_sum, recursive_sum_tail
 
 

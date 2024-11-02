@@ -1,4 +1,5 @@
 from typing import Any
+
 from pytest import fixture
 
 from src.swap_variables import swap

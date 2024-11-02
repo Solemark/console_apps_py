@@ -1,5 +1,6 @@
 from pytest import fixture
-from src.reverse_array import reverse_same_array, reverse_array
+
+from src.reverse_array import reverse_array, reverse_same_array
 
 
 @fixture

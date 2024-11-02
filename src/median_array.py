@@ -1,4 +1,4 @@
-from math import floor, ceil
+from math import ceil, floor
 
 
 def get_median_array(x: list[int | float], y: list[int | float]) -> int | float:

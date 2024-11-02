@@ -1,4 +1,5 @@
 from pytest import fixture
+
 from src.median_array import get_median_array
 
 

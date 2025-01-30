@@ -1,11 +1,11 @@
-from typing import Callable, TypeAlias
+from typing import Callable
 
 from pytest import fixture
 
-from src.filters import evens, negative, odds, positive
+from src.filters import Filters
 
 INP: list[int | float] = [0, 1, 2, 3, -4, 5, 6, 7, -8, 9, 10, -11]
-Func: TypeAlias = Callable[[list[int | float]], list[int | float]]
+type Func = Callable[[list[int | float]], list[int | float]]
 
 
 @fixture
@@ -18,11 +18,9 @@ def exp() -> list[list[int | float]]:
     ]
 
 
-@fixture
-def func() -> list[Func]:
-    return [negative, positive, odds, evens]
-
-
-def test_filter_funcs(exp: list[list[int | float]], func: list[Func]) -> None:
-    for i in range(0, len(exp)):
-        assert exp[i] == func[i](INP)
+def test_filter_funcs(exp: list[list[int | float]]) -> None:
+    fil = Filters(INP)
+    assert exp[0] == fil.negative()
+    assert exp[1] == fil.positive()
+    assert exp[2] == fil.odds()
+    assert exp[3] == fil.evens()

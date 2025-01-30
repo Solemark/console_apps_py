@@ -1,10 +1,9 @@
-def number(m: int | float, i: int | float = 0, t: int | float = 0) -> int | float:
-    if i > m:
-        return t
-    return number(m, i + 1, t + i)
+type Number = int | float
 
 
-def array(a: list[int | float], i: int = 0, t: int | float = 0) -> int | float:
-    if i > len(a) - 1:
-        return t
-    return array(a, i + 1, t + a[i])
+def number(m: Number, i: Number = 0, t: Number = 0) -> Number:
+    return t if i > m else number(m, i + 1, t + i)
+
+
+def array(a: list[Number], i: int = 0, t: Number = 0) -> Number:
+    return t if i > a.__len__() - 1 else array(a, i + 1, t + a[i])

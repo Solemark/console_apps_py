@@ -1,13 +1,13 @@
 from pytest import fixture
 
-from src.gacha_roll import roll
+from src.gacha_roll import Game, roll
 
 
 @fixture
 def data() -> list[str]:
-    return ["FGO", "AK", "GI", "Unknown"]
+    return [Game.FGO, Game.AK, Game.GI]
 
 
 def test_gacha_roll(data: list[str]) -> None:
     for i in data:
-        assert i in roll(i)
+        assert i.name in roll(i)

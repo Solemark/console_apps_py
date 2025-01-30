@@ -1,26 +1,28 @@
+from enum import Enum, auto
 from functools import partial
 from random import randint
 
 
-def roll(game: str) -> str:
-    play_fn = partial(__play, game)
+class Game(Enum):
+    FGO = auto()
+    AK = auto()
+    GI = auto()
+
+
+def roll(game: Game) -> str:
+    """roll until you get the rare!"""
+    play_fn = partial(__roll, game)
     match game:
-        case "FGO":
-            output = play_fn(100, 300, 5)
-        case "AK":
-            output = play_fn(50, 100, 6)
-        case "GI":
-            output = play_fn(60, 90, 5)
-        case _:
-            output = "Unknown Game!"
-    return output
+        case Game.FGO:
+            return play_fn(100, 300, 5)
+        case Game.AK:
+            return play_fn(50, 100, 6)
+        case Game.GI:
+            return play_fn(60, 90, 5)
 
 
-def __play(game: str, rate: int, pity: int, rarity: int) -> str:
-    return next(
-        (
-            f"it took {roll}/{pity} to get a {rarity}* in {game}"
-            for roll in range(1, pity + 1)
-            if roll == pity or rate == randint(1, rate)
-        ),
-    )
+def __roll(game: Game, rate: int, pity: int, rarity: int) -> str:
+    """actually do the rolls!"""
+    for i in range(1, pity + 1):
+        if i == pity or rate == randint(1, rate):
+            return f"it took {i}/{pity} rolls to get a {rarity}* in {game.name}"

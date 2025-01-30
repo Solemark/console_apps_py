@@ -1,7 +1,7 @@
-from typing import Callable, TypeAlias
+from typing import Callable
 
-Greet: TypeAlias = Callable[[str], str]
-Calc: TypeAlias = Callable[[int | float, int | float], int | float]
+type Greet = Callable[[str], str]
+type Calc = Callable[[int | float, int | float], int | float]
 
 
 def greet(func: Greet) -> str:

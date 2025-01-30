@@ -6,7 +6,7 @@ def get_current_time() -> str:
     return (
         f"The date is: {CURRENT_TIME.strftime('%A')} "
         f"the {format_date(CURRENT_TIME.day)} "
-        f"of { CURRENT_TIME.strftime('%B')} "
+        f"of {CURRENT_TIME.strftime('%B')} "
         f"{CURRENT_TIME.year}"
     )
 
